@@ -20,7 +20,7 @@ doc:
 	lua ./tools/ldoc/ldoc.lua -d ./doc -c ./config.ld ejdb.luadoc
 
 clean:
-	- rm -f *.so *.rock ./ejdb/*.so
+	- rm -f *.so *.rock ./ejdb/*.so *.o
 	- make -C ./test clean
 
 install:

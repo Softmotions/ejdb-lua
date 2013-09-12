@@ -1,0 +1,14 @@
+*.log
+/debian/files
+/test/testdb*
+/debian/lua51-ejdb*
+/lua-ejdb_*.build
+/lua-ejdb_*.dsc
+/lua-ejdb_*.gz
+/lua-ejdb_*.build
+/lua-ejdb_*.changes
+/lua51-ejdb_*.deb
+
+*.o
+*.rock
+*.so
