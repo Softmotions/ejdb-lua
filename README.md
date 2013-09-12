@@ -17,8 +17,8 @@ Installation
 
 ```
 umask 022
-git clone https://github.com/Softmotions/ejdb.git
-cd ./ejdb/luaejdb
+git clone https://github.com/Softmotions/ejdb-lua.git
+cd ./ejdb-lua
 make
 sudo luarocks install ./luaejdb-*.rock
 ```
