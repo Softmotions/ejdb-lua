@@ -51,7 +51,7 @@ local parrot1 = {
   type = "African Grey",
   male = true,
   age = 1,
-  birthhdate = ejdb.toDateNow(),
+  birthdate = ejdb.toDateNow(),
   likes = { "green color", "night", "toys" },
   extra1 = ejdb.toNull()
 }
