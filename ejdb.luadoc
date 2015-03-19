@@ -257,6 +257,8 @@ function DB:save(cname, obj, ...) end
 function DB:load(cname, oid) end
 
 --- Executes ejdb command.
+--
+-- @usage
 -- Supported commands:
 --    1) Exports database collections data. See ejdbexport() method.
 --
@@ -294,93 +296,11 @@ function DB:command(cmd) end
 --- Execute query on collection.
 --
 -- EJDB queries inspired by MongoDB (mongodb.org) and follows same philosophy.
---
 -- Queries and query hints can be constructed by @{Q} query/json builder.
---    - Supported queries:
---    - Simple matching of String OR Number OR Array value:
---        -   {'fpath' : 'val', ...}
---    - $not Negate operation.
---        -   {'fpath' : {'$not' : val}} //Field not equal to val
---        -   {'fpath' : {'$not' : {'$begin' : prefix}}} //Field not begins with val
---    - $begin String starts with prefix
---        -   {'fpath' : {'$begin' : prefix}}
---    - $gt, $gte (>, >=) and $lt, $lte for number types:
---        -   {'fpath' : {'$gt' : number}, ...}
---    - $bt Between for number types:
---        -   {'fpath' : {'$bt' : [num1, num2]}}
---    - $in String OR Number OR Array val matches to value in specified array:
---        -   {'fpath' : {'$in' : [val1, val2, val3]}}
---    - $nin - Not IN
---    - $strand String tokens OR String array val matches all tokens in specified array:
---        -   {'fpath' : {'$strand' : [val1, val2, val3]}}
---    - $stror String tokens OR String array val matches any token in specified array:
---        -   {'fpath' : {'$stror' : [val1, val2, val3]}}
---    - $exists Field existence matching:
---        -   {'fpath' : {'$exists' : true|false}}
---    - $icase Case insensitive string matching:
---        -    {'fpath' : {'$icase' : 'val1'}} //icase matching
---              icase matching with '$in' operation:
---        -    {'name' : {'$icase' : {'$in' : ['HEllo', 'heLLo WorlD']}}}
---             For case insensitive matching you can create special type of string index.
---    - $elemMatch The $elemMatch operator matches more than one component within an array element.
---        -    { array: { $elemMatch: { value1 : 1, value2 : { $gt: 1 } } } }
---              Restriction: only one $elemMatch allowed in context of one array field.
 --
--- - Queries can be used to update records:
---
---    $set Field set operation.
---        - {.., '$set' : {'field1' : val1, 'fieldN' : valN}}
---    $upsert Atomic upsert. If matching records are found it will be '$set' operation,
---            otherwise new record will be inserted
---            with fields specified by argment object.
---        - {.., '$upsert' : {'field1' : val1, 'fieldN' : valN}}
---    $inc Increment operation. Only number types are supported.
---        - {.., '$inc' : {'field1' : number, ...,  'field1' : number}
---    $dropall In-place record removal operation.
---        - {.., '$dropall' : true}
---    $addToSet Atomically adds value to the array only if its not in the array already.
---                If containing array is missing it will be created.
---        - {.., '$addToSet' : {'fpath' : val1, 'fpathN' : valN, ...}}
---    $addToSetAll Batch version if $addToSet
---        - {.., '$addToSetAll' : {'fpath' : [array of values to add], ...}}
---    $pull Atomically removes all occurrences of value from field, if field is an array.
---        - {.., '$pull' : {'fpath' : val1, 'fpathN' : valN, ...}}
---    $pullAll Batch version of $pull
---        - {.., '$pullAll' : {'fpath' : [array of values to remove], ...}}
---
--- - Collection joins supported in the following form:
---
---        {..., $do : {fpath : {$join : 'collectionname'}} }
---         Where 'fpath' value points to object's OIDs from 'collectionname'. Its value
---         can be OID, string representation of OID or array of this pointers.
---
---  **NOTE:** It is better to execute update queries with `$onlycount=true` hint flag
---        or use the special `update()` method to avoid unnecessarily data fetching.
---
---  **NOTE:** Negate operations: $not and $nin not using indexes
---        so they can be slow in comparison to other matching operations.
---
---  **NOTE:** Only one index can be used in search query operation.
---
---  **NOTE:** If callback is not provided this function will be synchronous.
---
---  **QUERY HINTS** specified by calling @{Q:Skip} @{Q:Max}, @{Q:OrderBy}, @{Q:Fields}:
---    - $max Maximum number in the result set
---    - $skip Number of skipped results in the result set
---    - $orderby Sorting order of query fields.
---    - $fields Set subset of fetched fields.
---        If field presented in $orderby clause it will be forced to include in resulting records.
---        Example:
---        hints:    {
---                    "$orderby" : { //ORDER BY field1 ASC, field2 DESC
---                        "field1" : 1,
---                        "field2" : -1
---                     },
---                    "$fields" : { //SELECT ONLY {_id, field1, field2}
---                        "field1" : 1,
---                        "field2" : 1
---                    }
---                  }
+-- See <a href="http://ejdb.org">http://ejdb.org</a> query language documetation.
+-- 
+-- @usage
 -- To traverse selected records cursor object is returned.
 -- Cursor (res):
 --    #res - length of result set
@@ -390,7 +310,6 @@ function DB:command(cmd) end
 --    res() - Creates iterator for pairs (obj, idx)
 --          where obj - Lua table constructed from BSON data
 --                idx - Index of fetched object in the result set
---
 -- Examples:
 --    for i = 1, #res do
 --      local ob = res:object(i)
@@ -411,7 +330,6 @@ function DB:command(cmd) end
 --      vobj["json field name"]
 --      ...
 --    end
---
 --
 -- @tparam string cname Collection name
 -- @tparam Q q JSON query object
@@ -462,6 +380,7 @@ function DB:sync(cname) end
 
 --- Get table object describes a database structure and its collections.
 --
+-- @usage
 -- Sample meta:
 --
 --    collections = {

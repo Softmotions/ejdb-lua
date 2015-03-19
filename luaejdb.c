@@ -2,7 +2,7 @@
 #include <lua.h>
 #include <lualib.h>
 #include <lauxlib.h>
-#include <tcejdb/ejdb_private.h>
+#include <ejdb/ejdb_private.h>
 
 #include "luabson.h"
 
