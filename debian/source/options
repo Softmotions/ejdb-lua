@@ -1,0 +1,10 @@
+tar-ignore = ".codelite"
+tar-ignore = ".clang"
+tar-ignore = ".git"
+tar-ignore = "*.project"
+tar-ignore = ".workspace"
+tar-ignore = ".git"
+tar-ignore = "compile_commands.json"
+
+
+

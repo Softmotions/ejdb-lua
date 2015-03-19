@@ -1,4 +1,4 @@
-*.log
+.codelite/
 /debian/files
 /test/testdb*
 /debian/lua51-ejdb*
@@ -8,7 +8,13 @@
 /lua-ejdb_*.build
 /lua-ejdb_*.changes
 /lua51-ejdb_*.deb
+/compile_commands.json
 
 *.o
 *.rock
 *.so
+*.log
+*.project
+*.tags
+*.workspace
+

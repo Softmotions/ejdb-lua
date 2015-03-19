@@ -9,7 +9,7 @@
 #define	LUABSON_H
 
 #include <lua.h>
-#include <tcejdb/bson.h>
+#include <ejdb/bson.h>
 
 #ifdef	__cplusplus
 extern "C" {

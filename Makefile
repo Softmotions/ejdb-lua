@@ -7,7 +7,7 @@ build:
 	umask $(UMASK) && luarocks --pack-binary-rock make
 
 build-dbg:
-	umask $(UMASK) && luarocks --pack-binary-rock CFLAGS='-g -O0 -fPIC -std=c99 -Wall' make
+	umask $(UMASK) && luarocks --pack-binary-rock CFLAGS='-g -O0 -fPIC -Wall' make
 
 check: build-dbg
 	make -C ./test
