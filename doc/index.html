@@ -47,7 +47,9 @@
 
 <p>The Lua binding of EJDB database.<br/>
  <a href="http://ejdb.org">http://ejdb.org</a></p>
-<p></p>
+<p>
+
+</p>
     <h3>Usage:</h3>
     <ul>
         <pre class="example">
@@ -212,7 +214,7 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#DB:count">DB:count&nbsp;(cname, q)</a></td>
-	<td class="summary">Convenient `count(*)` operation.</td>
+	<td class="summary">Convenient <code>count(*)</code> operation.</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#DB:sync">DB:sync&nbsp;(cname)</a></td>
@@ -296,11 +298,11 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#RS:object">RS:object&nbsp;(i)</a></td>
-	<td class="summary">Returns result set lua table object at specified position `i`</td>
+	<td class="summary">Returns result set lua table object at specified position <code>i</code></td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#RS:field">RS:field&nbsp;(i, name)</a></td>
-	<td class="summary">Returns field value of lua object at specified position `i`</td>
+	<td class="summary">Returns field value of lua object at specified position <code>i</code></td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#RS.__len">RS.__len&nbsp;()</a></td>
@@ -324,7 +326,7 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#Q:Not">Q:Not&nbsp;(val)</a></td>
-	<td class="summary">The $not negatiation for `val` block</td>
+	<td class="summary">The $not negatiation for <code>val</code> block</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#Q:Gt">Q:Gt&nbsp;(val)</a></td>
@@ -336,11 +338,11 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#Q:Lt">Q:Lt&nbsp;(val)</a></td>
-	<td class="summary">Lesser than (val < arg)</td>
+	<td class="summary">Lesser than (val &lt; arg)</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#Q:Lte">Q:Lte&nbsp;(val)</a></td>
-	<td class="summary">Lesser than or equal (val <= arg)</td>
+	<td class="summary">Lesser than or equal (val &lt;= arg)</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#Q:Icase">Q:Icase&nbsp;(val)</a></td>
@@ -352,7 +354,7 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#Q:In">Q:In&nbsp;(val)</a></td>
-	<td class="summary">Field value matched any value of specified in `val` table.</td>
+	<td class="summary">Field value matched any value of specified in <code>val</code> table.</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#Q:NotIn">Q:NotIn&nbsp;(val)</a></td>
@@ -364,11 +366,11 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#Q:StrAnd">Q:StrAnd&nbsp;(val)</a></td>
-	<td class="summary">String tokens(or string array vals) matches **all** tokens in specified `val` array.</td>
+	<td class="summary">String tokens(or string array vals) matches <strong>all</strong> tokens in specified <code>val</code> array.</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#Q:StrOr">Q:StrOr&nbsp;(val)</a></td>
-	<td class="summary">String tokens(or string array vals) matches **any** token in specified array.</td>
+	<td class="summary">String tokens(or string array vals) matches <strong>any</strong> token in specified array.</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#Q:Inc">Q:Inc&nbsp;(val)</a></td>
@@ -384,19 +386,19 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#Q:AddToSet">Q:AddToSet&nbsp;(val)</a></td>
-	<td class="summary">Atomically adds `val` to the `array field` only if `val` not in the array already.</td>
+	<td class="summary">Atomically adds <code>val</code> to the <code>array field</code> only if <code>val</code> not in the array already.</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#Q:AddToSetAll">Q:AddToSetAll&nbsp;(val)</a></td>
-	<td class="summary">Atomically performs `set union` with values in `val` for specified array field.</td>
+	<td class="summary">Atomically performs <code>set union</code> with values in <code>val</code> for specified array field.</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#Q:Pull">Q:Pull&nbsp;(val)</a></td>
-	<td class="summary">Atomically removes all occurrences of `val` from field, if field is an array.</td>
+	<td class="summary">Atomically removes all occurrences of <code>val</code> from field, if field is an array.</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#Q:PullAll">Q:PullAll&nbsp;(val)</a></td>
-	<td class="summary">Atomically performs `set substraction` of values in `val` for specified array field.</td>
+	<td class="summary">Atomically performs <code>set substraction</code> of values in <code>val</code> for specified array field.</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#Q:DropAll">Q:DropAll&nbsp;()</a></td>
@@ -409,7 +411,7 @@
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#Q:Or">Q:Or&nbsp;(...)</a></td>
-	<td class="summary">Add *OR* joined query restrictions.</td>
+	<td class="summary">Add <em>OR</em> joined query restrictions.</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#Q:Skip">Q:Skip&nbsp;(val)</a></td>
@@ -465,17 +467,17 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">path</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Database main file</li>
         <li><span class="parameter">mode</span>
-            <span class="types">optional <a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types">optional <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Database open mode flags:<br/>
- <code>`w`</code> Open as a writer <br/>
- <code>`r`</code> Open as a reader <br/>
- <code>`c`</code> Create db if it not exists <br/>
- <code>`t`</code> Truncate existing db <br/>
- <code>`s`</code> Sycn db after each transaction <br/>
- Default open mode: <code>`rwcs`</code></li>
+ <code><code>w</code></code> Open as a writer <br/>
+ <code><code>r</code></code> Open as a reader <br/>
+ <code><code>c</code></code> Create db if it not exists <br/>
+ <code><code>t</code></code> Truncate existing db <br/>
+ <code><code>s</code></code> Sycn db after each transaction <br/>
+ Default open mode: <code><code>rwcs</code></code></li>
     </ul>
 
     <h3>Returns:</h3>
@@ -515,7 +517,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">val</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          24 hex chars BSON_OID</li>
     </ul>
 
@@ -534,7 +536,9 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">val</span>
-        </li>
+
+
+</li>
     </ul>
 
     <h3>Returns:</h3>
@@ -575,10 +579,10 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">re</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Regular expression</li>
         <li><span class="parameter">opts</span>
-            <span class="types">optional <a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types">optional <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Regular expression flags</li>
     </ul>
 
@@ -602,7 +606,9 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">val</span>
-        </li>
+
+
+</li>
     </ul>
 
     <h3>Returns:</h3>
@@ -661,7 +667,9 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">val</span>
-        </li>
+
+
+</li>
     </ul>
 
 
@@ -683,7 +691,9 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">val</span>
-        </li>
+
+
+</li>
     </ul>
 
 
@@ -722,9 +732,13 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">re</span>
-        </li>
+
+
+</li>
         <li><span class="parameter">opts</span>
-        </li>
+
+
+</li>
     </ul>
 
 
@@ -746,7 +760,9 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">val</span>
-        </li>
+
+
+</li>
     </ul>
 
 
@@ -811,19 +827,19 @@
     </dt>
     <dd>
     Save/update specified JSON objects in the collection.
- If collection with `cname` does not exists it will be created.
- Each persistent object has unique identifier (OID) placed in the `_id` property.
- If a saved object does not have `_id` it will be autogenerated.
- To identify and update object it should contains `_id` property.
+ If collection with <code>cname</code> does not exists it will be created.
+ Each persistent object has unique identifier (OID) placed in the <code>_id</code> property.
+ If a saved object does not have <code>_id</code> it will be autogenerated.
+ To identify and update object it should contains <code>_id</code> property.
  already persisted in db.
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cname</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Collection name.</li>
         <li><span class="parameter">obj</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a> or <a class="type" href="index.html#Q">Q</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <a class="type" href="index.html#Q">Q</a></span>
          represents JSON object.</li>
         <li><span class="parameter">...</span>
          If last argument is True a saved object will be merged with who's</li>
@@ -849,10 +865,10 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cname</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Collection name</li>
         <li><span class="parameter">oid</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a> or <a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a> or <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          24 hex chars BSON_OID or BSON oid table</li>
     </ul>
 
@@ -871,7 +887,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cmd</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a> or <a class="type" href="index.html#Q">Q</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <a class="type" href="index.html#Q">Q</a></span>
          Command object.</li>
     </ul>
 
@@ -924,38 +940,43 @@
     <strong>DB:find&nbsp;(cname, q, flags)</strong>
     </dt>
     <dd>
-    Execute query on collection.
+    Execute query on collection. </p>
+
 <p> EJDB queries inspired by MongoDB (mongodb.org) and follows same philosophy.
- Queries and query hints can be constructed by <a href="index.html#Q">Q</a> query/json builder.
+ Queries and query hints can be constructed by <a href="index.html#Q">Q</a> query/json builder.</p>
+
 <p> See <a href="http://ejdb.org">http://ejdb.org</a> query language documetation.
 
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cname</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Collection name</li>
         <li><span class="parameter">q</span>
             <span class="types"><a class="type" href="index.html#Q">Q</a></span>
          JSON query object</li>
         <li><span class="parameter">flags</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-         Query control flags:
-    `c`: only count of matching records will be returned without placing records in result set.
-    `l`: return query execution log</li>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+<p> Query control flags:</p>
+<pre><code>`c`: only count of matching records will be returned without placing records in result set.
+`l`: return query execution log
+</code></pre>
+</li>
     </ul>
 
     <h3>Returns:</h3>
     <ol>
         <li>
           <span class="types"><a class="type" href="index.html#RS">RS</a></span>
-        result set, it will be `nil` if `c` flag presented in the control `flags`</li>
+        result set, it will be <code>nil</code> if <code>c</code> flag presented in the control <code>flags</code></li>
         <li>
           <span class="types"><span class="type">number</span></span>
         Count of matched/updated records</li>
         <li>
-          <span class="types">optional <a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-        Query execution log if `l` flag presented in the control `flags`</li>
+          <span class="types">optional <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        Query execution log if <code>l</code> flag presented in the control <code>flags</code></li>
     </ol>
 
 
@@ -1013,7 +1034,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cname</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Collection name</li>
         <li><span class="parameter">q</span>
             <span class="types"><a class="type" href="index.html#Q">Q</a></span>
@@ -1023,14 +1044,14 @@
     <h3>Returns:</h3>
     <ol>
         <li>
-          <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
-        Lua table constructed from matched BSON record or `nil` of record not found</li>
+          <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        Lua table constructed from matched BSON record or <code>nil</code> of record not found</li>
         <li>
           <span class="types"><span class="type">number</span></span>
         Count of matched/updated records</li>
         <li>
-          <span class="types">optional <a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-        Query execution log if `l` flag presented in the control `flags`</li>
+          <span class="types">optional <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        Query execution log if <code>l</code> flag presented in the control <code>flags</code></li>
     </ol>
 
 
@@ -1047,7 +1068,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cname</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Collection name</li>
         <li><span class="parameter">q</span>
             <span class="types"><a class="type" href="index.html#Q">Q</a></span>
@@ -1060,8 +1081,8 @@
           <span class="types"><span class="type">number</span></span>
         Count of matched/updated records</li>
         <li>
-          <span class="types">optional <a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-        Query execution log if `l` flag presented in the control `flags`</li>
+          <span class="types">optional <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        Query execution log if <code>l</code> flag presented in the control <code>flags</code></li>
     </ol>
 
 
@@ -1073,12 +1094,12 @@
     <strong>DB:count&nbsp;(cname, q)</strong>
     </dt>
     <dd>
-    Convenient `count(*)` operation.
+    Convenient <code>count(*)</code> operation.
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cname</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Collection name</li>
         <li><span class="parameter">q</span>
             <span class="types"><a class="type" href="index.html#Q">Q</a></span>
@@ -1091,8 +1112,8 @@
           <span class="types"><span class="type">number</span></span>
         Count of matched/updated records</li>
         <li>
-          <span class="types">optional <a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-        Query execution log if `l` flag presented in the control `flags`</li>
+          <span class="types">optional <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        Query execution log if <code>l</code> flag presented in the control <code>flags</code></li>
     </ol>
 
 
@@ -1105,12 +1126,12 @@
     </dt>
     <dd>
     Synchronize EJDB database with storage.
- If `cname` is provided only this collection will be synced.
+ If <code>cname</code> is provided only this collection will be synced.
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cname</span>
-            <span class="types">optional <a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types">optional <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Collection name</li>
     </ul>
 
@@ -1130,7 +1151,7 @@
     <h3>Returns:</h3>
     <ol>
 
-          <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+          <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         Database metadata
     </ol>
 
@@ -1187,7 +1208,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cname</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Collection name</li>
     </ul>
 
@@ -1206,7 +1227,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cname</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Collection name</li>
     </ul>
 
@@ -1225,7 +1246,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cname</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Collection name</li>
     </ul>
 
@@ -1240,12 +1261,12 @@
     </dt>
     <dd>
     Get collection transaction status.
- Returns `True` if transaction is active.
+ Returns <code>True</code> if transaction is active.
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cname</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Collection name</li>
     </ul>
 
@@ -1253,6 +1274,8 @@
     <ol>
 
           <span class="types"><span class="type">bool</span></span>
+
+
 
     </ol>
 
@@ -1270,10 +1293,10 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cname</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Collection name</li>
         <li><span class="parameter">fpath</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          JSON field path for index</li>
     </ul>
 
@@ -1293,10 +1316,10 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cname</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Collection name</li>
         <li><span class="parameter">fpath</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          JSON field path for index</li>
     </ul>
 
@@ -1315,10 +1338,10 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cname</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Collection name</li>
         <li><span class="parameter">fpath</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          JSON field path for index</li>
     </ul>
 
@@ -1337,10 +1360,10 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cname</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Collection name</li>
         <li><span class="parameter">fpath</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          JSON field path for index</li>
     </ul>
 
@@ -1359,10 +1382,10 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cname</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Collection name</li>
         <li><span class="parameter">fpath</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          JSON field path for index</li>
     </ul>
 
@@ -1381,10 +1404,10 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cname</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Collection name</li>
         <li><span class="parameter">fpath</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          JSON field path for index</li>
     </ul>
 
@@ -1403,10 +1426,10 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cname</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Collection name</li>
         <li><span class="parameter">fpath</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          JSON field path for index</li>
     </ul>
 
@@ -1425,10 +1448,10 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cname</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Collection name</li>
         <li><span class="parameter">fpath</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          JSON field path for index</li>
     </ul>
 
@@ -1447,10 +1470,10 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cname</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Collection name</li>
         <li><span class="parameter">fpath</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          JSON field path for index</li>
     </ul>
 
@@ -1469,10 +1492,10 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cname</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Collection name</li>
         <li><span class="parameter">fpath</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          JSON field path for index</li>
     </ul>
 
@@ -1491,10 +1514,10 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cname</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Collection name</li>
         <li><span class="parameter">fpath</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          JSON field path for index</li>
     </ul>
 
@@ -1513,10 +1536,10 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cname</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Collection name</li>
         <li><span class="parameter">fpath</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          JSON field path for index</li>
     </ul>
 
@@ -1535,10 +1558,10 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cname</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Collection name</li>
         <li><span class="parameter">fpath</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          JSON field path for index</li>
     </ul>
 
@@ -1557,10 +1580,10 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cname</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Collection name</li>
         <li><span class="parameter">fpath</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          JSON field path for index</li>
     </ul>
 
@@ -1574,7 +1597,7 @@
     <strong>RS:object&nbsp;(i)</strong>
     </dt>
     <dd>
-    Returns result set lua table object at specified position `i`
+    Returns result set lua table object at specified position <code>i</code>
 
     <h3>Parameters:</h3>
     <ul>
@@ -1586,7 +1609,7 @@
     <h3>Returns:</h3>
     <ol>
 
-          <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+          <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
         Resulting lua object constructed from BSON record.
     </ol>
 
@@ -1599,7 +1622,7 @@
     <strong>RS:field&nbsp;(i, name)</strong>
     </dt>
     <dd>
-    Returns field value of lua object at specified position `i`
+    Returns field value of lua object at specified position <code>i</code>
 
     <h3>Parameters:</h3>
     <ul>
@@ -1607,7 +1630,7 @@
             <span class="types"><span class="type">number</span></span>
          Position of record in the result set</li>
         <li><span class="parameter">name</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          JSON field name</li>
     </ul>
 
@@ -1644,9 +1667,13 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">key</span>
-        </li>
+
+
+</li>
         <li><span class="parameter">value</span>
-        </li>
+
+
+</li>
     </ul>
 
 
@@ -1668,7 +1695,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">fname</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          JSON field path</li>
     </ul>
 
@@ -1687,7 +1714,7 @@
     </dt>
     <dd>
     Field equality restriction.
- All usage samples represent same thing: `{"fname" : fval}`
+ All usage samples represent same thing: <code>{"fname" : fval}</code>
 
     <h3>Parameters:</h3>
     <ul>
@@ -1724,7 +1751,9 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">val</span>
-        </li>
+
+
+</li>
     </ul>
 
     <h3>Returns:</h3>
@@ -1742,12 +1771,14 @@
     <strong>Q:Not&nbsp;(val)</strong>
     </dt>
     <dd>
-    The $not negatiation for `val` block
+    The $not negatiation for <code>val</code> block
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">val</span>
-        </li>
+
+
+</li>
     </ul>
 
     <h3>Returns:</h3>
@@ -1775,7 +1806,9 @@
     <ul>
         <li><span class="parameter">val</span>
             <span class="types"><span class="type">number</span></span>
-        </li>
+
+
+</li>
     </ul>
 
     <h3>Returns:</h3>
@@ -1803,7 +1836,9 @@
     <ul>
         <li><span class="parameter">val</span>
             <span class="types"><span class="type">number</span></span>
-        </li>
+
+
+</li>
     </ul>
 
     <h3>Returns:</h3>
@@ -1825,13 +1860,15 @@
     <strong>Q:Lt&nbsp;(val)</strong>
     </dt>
     <dd>
-    Lesser than (val < arg)
+    Lesser than (val &lt; arg)
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">val</span>
             <span class="types"><span class="type">number</span></span>
-        </li>
+
+
+</li>
     </ul>
 
     <h3>Returns:</h3>
@@ -1853,13 +1890,15 @@
     <strong>Q:Lte&nbsp;(val)</strong>
     </dt>
     <dd>
-    Lesser than or equal (val <= arg)
+    Lesser than or equal (val &lt;= arg)
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">val</span>
             <span class="types"><span class="type">number</span></span>
-        </li>
+
+
+</li>
     </ul>
 
     <h3>Returns:</h3>
@@ -1886,8 +1925,10 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">val</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a>, <a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a> or <a class="type" href="index.html#Q">Q</a></span>
-        </li>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a>, <a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <a class="type" href="index.html#Q">Q</a></span>
+
+
+</li>
     </ul>
 
     <h3>Returns:</h3>
@@ -1915,8 +1956,10 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">val</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
-        </li>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+
+</li>
     </ul>
 
     <h3>Returns:</h3>
@@ -1938,12 +1981,12 @@
     <strong>Q:In&nbsp;(val)</strong>
     </dt>
     <dd>
-    Field value matched any value of specified in `val` table.
+    Field value matched any value of specified in <code>val</code> table.
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">val</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
           Not empty lua array of values.</li>
     </ul>
 
@@ -1971,7 +2014,9 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">val</span>
-        </li>
+
+
+</li>
     </ul>
 
     <h3>Returns:</h3>
@@ -1999,10 +2044,14 @@
     <ul>
         <li><span class="parameter">n1</span>
             <span class="types"><span class="type">number</span></span>
-        </li>
+
+
+</li>
         <li><span class="parameter">n2</span>
             <span class="types"><span class="type">number</span></span>
-        </li>
+
+
+</li>
     </ul>
 
     <h3>Returns:</h3>
@@ -2024,12 +2073,12 @@
     <strong>Q:StrAnd&nbsp;(val)</strong>
     </dt>
     <dd>
-    String tokens(or string array vals) matches **all** tokens in specified `val` array.
+    String tokens(or string array vals) matches <strong>all</strong> tokens in specified <code>val</code> array.
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">val</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Array of tokens to match.</li>
     </ul>
 
@@ -2052,12 +2101,12 @@
     <strong>Q:StrOr&nbsp;(val)</strong>
     </dt>
     <dd>
-    String tokens(or string array vals) matches **any** token in specified array.
+    String tokens(or string array vals) matches <strong>any</strong> token in specified array.
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">val</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Array of tokens to match.</li>
     </ul>
 
@@ -2086,7 +2135,9 @@
     <ul>
         <li><span class="parameter">val</span>
             <span class="types"><span class="type">number</span></span>
-        </li>
+
+
+</li>
     </ul>
 
     <h3>Returns:</h3>
@@ -2117,7 +2168,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">val</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a> or <a class="type" href="index.html#Q">Q</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <a class="type" href="index.html#Q">Q</a></span>
          Table of fields to set</li>
     </ul>
 
@@ -2141,13 +2192,13 @@
     </dt>
     <dd>
     Atomic upsert.
- If matching records are found it will be `$set` operation,
- otherwise new record will be inserted with fields specified by `val` table.
+ If matching records are found it will be <code>$set</code> operation,
+ otherwise new record will be inserted with fields specified by <code>val</code> table.
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">val</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a> or <a class="type" href="index.html#Q">Q</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <a class="type" href="index.html#Q">Q</a></span>
          Table of fields to set/insert
  Insert {"foo" : "bar"} if this object does not exists:</li>
     </ul>
@@ -2172,7 +2223,7 @@
     <strong>Q:AddToSet&nbsp;(val)</strong>
     </dt>
     <dd>
-    Atomically adds `val` to the `array field` only if `val` not in the array already.
+    Atomically adds <code>val</code> to the <code>array field</code> only if <code>val</code> not in the array already.
  If containing array is missing it will be created.
 
     <h3>Parameters:</h3>
@@ -2200,12 +2251,12 @@
     <strong>Q:AddToSetAll&nbsp;(val)</strong>
     </dt>
     <dd>
-    Atomically performs `set union` with values in `val` for specified array field.
+    Atomically performs <code>set union</code> with values in <code>val</code> for specified array field.
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">val</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Array of values to add</li>
     </ul>
 
@@ -2232,7 +2283,7 @@
     <strong>Q:Pull&nbsp;(val)</strong>
     </dt>
     <dd>
-    Atomically removes all occurrences of `val` from field, if field is an array.
+    Atomically removes all occurrences of <code>val</code> from field, if field is an array.
 
     <h3>Parameters:</h3>
     <ul>
@@ -2263,12 +2314,12 @@
     <strong>Q:PullAll&nbsp;(val)</strong>
     </dt>
     <dd>
-    Atomically performs `set substraction` of values in `val` for specified array field.
+    Atomically performs <code>set substraction</code> of values in <code>val</code> for specified array field.
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">val</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
          Array of values to remove from array field</li>
     </ul>
 
@@ -2323,10 +2374,10 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">cname</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Name for joined collection</li>
         <li><span class="parameter">fpath</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Name of field with BSON OIDs of joined objects</li>
     </ul>
 
@@ -2345,12 +2396,12 @@
     <strong>Q:Or&nbsp;(...)</strong>
     </dt>
     <dd>
-    Add *OR* joined query restrictions.
+    Add <em>OR</em> joined query restrictions.
 
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">...</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.5">table</a> or <a class="type" href="index.html#Q">Q</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a> or <a class="type" href="index.html#Q">Q</a></span>
          List of OR joined restrictions</li>
     </ul>
 
@@ -2380,7 +2431,9 @@
     <ul>
         <li><span class="parameter">val</span>
             <span class="types"><span class="type">number</span></span>
-        </li>
+
+
+</li>
     </ul>
 
     <h3>Returns:</h3>
@@ -2404,7 +2457,9 @@
     <ul>
         <li><span class="parameter">val</span>
             <span class="types"><span class="type">number</span></span>
-        </li>
+
+
+</li>
     </ul>
 
     <h3>Returns:</h3>
@@ -2428,7 +2483,9 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">...</span>
-        </li>
+
+
+</li>
     </ul>
 
 
@@ -2452,7 +2509,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">...</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Fields to be included in fetched objects.</li>
     </ul>
 
@@ -2480,7 +2537,7 @@
     <h3>Parameters:</h3>
     <ul>
         <li><span class="parameter">...</span>
-            <span class="types"><a class="type" href="http://www.lua.org/manual/5.2/manual.html#6.4">string</a></span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
          Fields to be excluded from fetched objects.</li>
     </ul>
 
@@ -2508,7 +2565,8 @@
     <dd>
     Query/JSON builder is used to create EJDB queries or JSON objects with
  preserverd keys order (Unlike lua tables).
- <a href="index.html#Q">Q</a> **can be used to construct BSON objects as well as queries.**
+ <a href="index.html#Q">Q</a> <strong>can be used to construct BSON objects as well as queries.</strong></p>
+
 <p> Examples:
 
 
@@ -2579,31 +2637,42 @@
     <strong>RS</strong>
     </dt>
     <dd>
-    Result set cursor object.
- Usage:
-    #res - length of result set
-    res[i] - BSON representations of object as lua string
-    res:object(i) - Lua table constructed from BSON data
-    res:field(i, <field name>) - Lua value of fetched BSON object
-    res() - Creates iterator for pairs (obj, idx)
-          where obj - Lua table constructed from BSON data
-                idx - Index of fetched object in the result set
-<p> Examples:
-    for i = 1, #res do
-      local ob = res:object(i)
-      ...
-    end
-<p> OR
-<p>    for i = 1, #res do
-      res:field(i, "json field name")
-      ...
-    end
-<p> OR
-<p>    for vobj, idx in res() do
-      -- vobj is a lua table representation of fetched json object
-      vobj["json field name"]
-      ...
-    end
+
+<p>Result set cursor object.
+ Usage:</p>
+<pre><code>#res - length of result set
+res[i] - BSON representations of object as lua string
+res:object(i) - Lua table constructed from BSON data
+res:field(i, &lt;field name&gt;) - Lua value of fetched BSON object
+res() - Creates iterator for pairs (obj, idx)
+      where obj - Lua table constructed from BSON data
+            idx - Index of fetched object in the result set
+</code></pre>
+
+<p> Examples:</p>
+<pre><code>for i = 1, #res do
+  local ob = res:object(i)
+  ...
+end
+</code></pre>
+
+<p> OR</p>
+
+<pre><code>for i = 1, #res do
+  res:field(i, "json field name")
+  ...
+end
+</code></pre>
+
+<p> OR</p>
+
+<pre><code>for vobj, idx in res() do
+  -- vobj is a lua table representation of fetched json object
+  vobj["json field name"]
+  ...
+end
+</code></pre>
+
 
 
 

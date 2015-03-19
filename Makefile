@@ -4,7 +4,7 @@ UMASK=022
 all: doc build
 
 build:
-	umask $(UMASK) && luarocks --pack-binary-rock make
+	umask $(UMASK) && luarocks  --lua-version=5.2 --pack-binary-rock make
 
 build-dbg:
 	umask $(UMASK) && luarocks --pack-binary-rock CFLAGS='-g -O0 -fPIC -Wall' make
@@ -35,5 +35,7 @@ install-ndeb:
 
 deb-packages: clean
 	debuild --no-tgz-check $(DEBUILD_OPTS)
+
+
 
 .PHONY: all build build-dbg check check-valgrind clean doc install install-ndeb install-deb

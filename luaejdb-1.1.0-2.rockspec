@@ -1,12 +1,13 @@
 package = "luaejdb"
-version = "1.1.0-1"
+version = "1.1.0-2"
 source = {
-  url = "https://github.com/Softmotions/ejdb-lua.git"
+  url = "git://github.com/Softmotions/ejdb-lua.git"
 }
 description = {
   summary = "Embedded JSON Database engine Lua binding",
-  detailed = [[It aims to be a fast MongoDB-like library which can be embedded into C/C++
-  and NodeJS/Python/Lua applications under terms of LGPL license.
+  detailed = [[It aims to be a fast MongoDB-like library which can be embedded into C/C++, .Net, NodeJS, 
+  Python, Lua, Go, Java and Ruby applications under terms of LGPL license. 
+  This package requires the EJDB C library (libejdb) to be installed (https://github.com/Softmotions/ejdb) 
    ]],
   homepage = "http://ejdb.org",
   license = "LGPLv2"
@@ -17,7 +18,7 @@ dependencies = {
 }
 
 external_dependencies = {
-   LIBTCEJDB = {
+   LIBEJDB = {
       header = "ejdb/ejdb.h"
    }
 }
@@ -30,8 +31,8 @@ build = {
     ["luaejdb"] = {
        sources = {"luaejdb.c", "luabson.c"},
        libraries = {"ejdb"} ,
-       incdirs = {"$(LIBTCEJDB_INCDIR)"},
-       libdirs = {"$(LIBTCEJDB_LIBDIR)"},
+       incdirs = {"$(LIBEJDB_INCDIR)"},
+       libdirs = {"$(LIBEJDB_LIBDIR)"},
        defines = {}
     }
   }
